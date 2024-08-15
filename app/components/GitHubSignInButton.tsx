@@ -5,15 +5,15 @@ import { GithubIcon } from 'lucide-react'
 import { signIn } from 'next-auth/react'
 
 export default function GitHubSignInButton() {
-  return (
-    <Button
-      onClick={() => {
-        signIn('github')
-      }}
-      variant={'outline'}
-      size="icon"
-    >
-      <GithubIcon className="w-4 h-4" />
-    </Button>
-  )
+    return (
+        <Button
+            onClick={() => {
+                signIn('github')
+            }}
+            variant={'outline'}
+            size="icon"
+        >
+            <GithubIcon className="w-4 h-4" />
+        </Button>
+    )
 }
