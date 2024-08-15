@@ -1,0 +1,12 @@
+/.next
+/database
+/node_modules
+/prisma
+/public
+.env
+.eslintrc.json
+.gitignore
+*.json
+*.yml
+*.mjs
+README.md

@@ -46,7 +46,7 @@ export default function MovieButtons({
         duration={duration}
         key={id}
         overview={overview}
-        relase={releaseDate}
+        release={releaseDate}
         title={title}
         youtubeUrl={youtubeUrl}
       />
