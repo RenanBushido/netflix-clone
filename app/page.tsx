@@ -2,11 +2,11 @@ import { auth } from '@/auth'
 import { redirect } from 'next/navigation'
 
 export default async function Home() {
-    const session = await auth()
+  const session = await auth()
 
-    if (!session) {
-        return redirect('/login')
-    } else {
-        return redirect('/home')
-    }
+  if (!session) {
+    return redirect('/login')
+  } else {
+    return redirect('/home')
+  }
 }
