@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import prisma from '../utils/db'
-import MovieCards from './MovieCard'
+import MovieCard from './MovieCard'
 import { auth } from '@/auth'
 
-async function getData(userId: string) {
+async function getData(userId: string | undefined) {
   const data = await prisma.movie.findMany({
     select: {
       id: true,
@@ -54,11 +54,12 @@ export default async function RecentlyAdded() {
                 height={800}
                 className="absolute w-full h-full -z-10 rounded-lg object-cover"
               />
-              <MovieCards
+
+              <MovieCard
                 movieId={movie.id}
                 overview={movie.overview}
                 title={movie.title}
-                watchListId={movie?.WatchLists[0]?.id}
+                wachtListId={movie.WatchLists[0]?.id}
                 youtubeUrl={movie.youtubeString}
                 watchList={movie.WatchLists.length > 0}
                 key={movie.id}

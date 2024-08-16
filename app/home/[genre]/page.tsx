@@ -118,7 +118,7 @@ export default async function CategoryPage({
                 overview={movie.overview}
                 movieId={movie.id}
                 watchList={movie.WatchLists.length > 0}
-                watchListId={movie.WatchLists[0]?.id}
+                wachtListId={movie.WatchLists[0]?.id}
                 youtubeUrl={movie.youtubeString}
                 year={movie.release}
                 age={movie.age}
